@@ -11,4 +11,4 @@ Open questions:
 - MCP hostname confirmed by user? Last answer was "confirmed" without a choice; apex vs mcp. unresolved, default mcp.warnetwork.cloud.
 - Remaining network: warnetech-server-vpc (019fc1ec) TCP 5190 status to confirm.
 
-Autostart: no
+Autostart: yes
