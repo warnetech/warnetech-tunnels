@@ -1,0 +1,22 @@
+# Copy to terraform.tfvars and fill in your values
+# DO NOT commit terraform.tfvars — it contains secrets
+
+cloudflare_api_token  = ""          # Scoped API token
+cloudflare_account_id = ""          # Dashboard > any zone > Overview > Account ID
+cloudflare_zone_id    = ""          # Dashboard > zone > Overview > Zone ID
+cloudflare_zone       = "example.com"
+
+tunnel_name = "warnetech-tunnel"
+
+tunnel_services = {
+  app = { service = "http://localhost:8080" }
+  # api = { service = "http://localhost:3000" }
+  # ssh = { service = "ssh://localhost:22" }
+}
+
+access_allowed_emails = [
+  "you@example.com",
+]
+
+# access_allowed_email_domains = ["example.com"]
+# access_session_duration      = "24h"
