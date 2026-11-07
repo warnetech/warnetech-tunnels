@@ -40,6 +40,7 @@ Keep the tunnel token out of the repo and out of chat. Rotate any token that has
 | Name | ID | Role | Status |
 | --- | --- | --- | --- |
 | warnetech-tunnel | `86f654bb-aa29-4387-9815-7cb8d258b471` | Public ingress: `www.warnet-tunnel.warnetwork.cloud` -> `localhost:443` | Connected (per logs) |
+| warnetech-server | `64026924-13c7-4335-a439-cd8d3091bfd5` | Connector tunnel, ingress `warnetech-server-vn.warnetwork.cloud` -> `localhost:8080`, WARP routing on. Confirm name in dashboard | Connected (per logs) |
 | warnetech-webserver | `a0c57798-0737-4085-9945-516d3daee4a4` | Tunnel for the web server (cloudflared service) | Not checked |
 | warnetech-server | not recorded | Tunnel reaching the private server, host `vpc.warnetwork.cloud` | **Inactive** |
 | warnetech-server-vpc | service `019fc1ec-f970-7b93-8cbb-911fa1b4a35f` | Private TCP service, `vpc.warnetwork.cloud`, port 5190 (MySQL) | Blocked until warnetech-server is active |
