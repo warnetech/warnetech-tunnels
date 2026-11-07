@@ -16,3 +16,5 @@ infra/*.auto.tfvars
 # OS
 .DS_Store
 Thumbs.db
+worker/node_modules/
+worker/dist/

@@ -1,0 +1,22 @@
+{
+  "name": "warnetech-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Stateless MCP server on a Cloudflare Worker (Phase 2)",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --format=esm --platform=neutral --target=es2022 --conditions=worker,workerd,browser --external:node:* --outfile=dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node test/smoke.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.4.0",
+    "agents": "^0.33.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260101.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.6.0"
+  }
+}
