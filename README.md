@@ -43,5 +43,10 @@ Keep the tunnel token out of the repo and out of chat. Rotate any token that has
 | warnetech-webserver | `a0c57798-0737-4085-9945-516d3daee4a4` | Tunnel for the web server (cloudflared service) | Not checked |
 | warnetech-server | not recorded | Tunnel reaching the private server, host `vpc.warnetwork.cloud` | **Inactive** |
 | warnetech-server-vpc | service `019fc1ec-f970-7b93-8cbb-911fa1b4a35f` | Private TCP service, `vpc.warnetwork.cloud`, port 5190 (MySQL) | Blocked until warnetech-server is active |
+| debian-core-tunnel | `5513185d-056d-4b7e-806b-516fbd431dcd` | Tunnel, ingress not recorded | Not checked |
+| warnetech-server-turn | `9f5a005bac0da51abadf695e3a4dce80` | TURN app (WebRTC relay) | Not checked |
+| warnetech-server-sfu | `3c42b7c09db079cb4bfc3cfe14fc23c7` | Serverless SFU app | Not checked |
+| warnetech-server-relay | `7e19eafac491292e8d7ada009d629cce` | MoQ relay, endpoint `draft-18.cloudflare.mediaoverquic.com` | Not checked |
+| warnetech-server-realtime | `01463559-9e66-49a2-9efd-af212dbaa4eb` | RealtimeKit app | Not checked |
 
 The VPC service is deliberately not bound to the MCP Worker. A bound database on a public endpoint is exposed to every caller of MCP.
