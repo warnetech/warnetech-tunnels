@@ -59,6 +59,12 @@ variable "mcp_worker_name" {
   default     = "warnetech-mcp"
 }
 
+variable "mcp_kv_namespace_id" {
+  description = "KV namespace bound to the MCP Worker as WARNETECH_KV"
+  type        = string
+  default     = "00f2977d3fbc41358a132c3619d9f607"
+}
+
 variable "mcp_compatibility_date" {
   description = "Workers runtime compatibility date for the MCP Worker"
   type        = string

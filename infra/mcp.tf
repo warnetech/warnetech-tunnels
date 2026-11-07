@@ -25,6 +25,11 @@ resource "cloudflare_workers_script" "mcp" {
       name = "MCP_HOSTNAME"
       text = local.mcp_hostname
     },
+    {
+      type         = "kv_namespace"
+      name         = "WARNETECH_KV"
+      namespace_id = var.mcp_kv_namespace_id
+    },
   ]
 
   lifecycle {
