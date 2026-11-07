@@ -26,6 +26,11 @@ output "service_urls" {
   }
 }
 
+output "mcp_url" {
+  description = "Public MCP endpoint (behind Access)"
+  value       = "https://${local.mcp_hostname}/mcp"
+}
+
 output "cloudflared_run_command" {
   description = "Command to start cloudflared on the origin server"
   value       = "cloudflared tunnel run --token $(terraform output -raw tunnel_token)"

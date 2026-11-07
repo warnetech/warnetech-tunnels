@@ -44,6 +44,28 @@ variable "tunnel_services" {
 }
 
 # -----------------------------------------------------------------------------
+# MCP server (Phase 2)
+# -----------------------------------------------------------------------------
+
+variable "mcp_subdomain" {
+  description = "Subdomain for the MCP server, relative to cloudflare_zone"
+  type        = string
+  default     = "mcp"
+}
+
+variable "mcp_worker_name" {
+  description = "Worker script name for the MCP server"
+  type        = string
+  default     = "warnetech-mcp"
+}
+
+variable "mcp_compatibility_date" {
+  description = "Workers runtime compatibility date for the MCP Worker"
+  type        = string
+  default     = "2026-10-01"
+}
+
+# -----------------------------------------------------------------------------
 # Access configuration
 # -----------------------------------------------------------------------------
 

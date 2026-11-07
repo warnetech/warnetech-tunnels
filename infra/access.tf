@@ -24,11 +24,11 @@ resource "cloudflare_zero_trust_access_policy" "allowed_users" {
 resource "cloudflare_zero_trust_access_application" "service" {
   for_each = var.tunnel_services
 
-  account_id          = var.cloudflare_account_id
-  name                = "${each.key}.${var.cloudflare_zone}"
-  domain              = "${each.key}.${var.cloudflare_zone}"
-  type                = "self_hosted"
-  session_duration    = var.access_session_duration
+  account_id       = var.cloudflare_account_id
+  name             = "${each.key}.${var.cloudflare_zone}"
+  domain           = "${each.key}.${var.cloudflare_zone}"
+  type             = "self_hosted"
+  session_duration = var.access_session_duration
 
   policies = [{
     id         = cloudflare_zero_trust_access_policy.allowed_users.id

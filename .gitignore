@@ -18,3 +18,4 @@ infra/*.auto.tfvars
 Thumbs.db
 worker/node_modules/
 worker/dist/
+worker/.wrangler/
