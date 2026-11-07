@@ -39,7 +39,7 @@ variable "tunnel_services" {
     service = string
   }))
   default = {
-    app = { service = "http://localhost:8080" }
+    "www.warnet-tunnel" = { service = "https://localhost:443" }
   }
 }
 

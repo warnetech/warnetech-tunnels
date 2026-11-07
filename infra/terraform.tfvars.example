@@ -4,18 +4,17 @@
 cloudflare_api_token  = ""          # Scoped API token
 cloudflare_account_id = ""          # Dashboard > any zone > Overview > Account ID
 cloudflare_zone_id    = ""          # Dashboard > zone > Overview > Zone ID
-cloudflare_zone       = "example.com"
+cloudflare_zone       = "warnetwork.cloud"
 
 tunnel_name = "warnetech-tunnel"
 
 tunnel_services = {
-  app = { service = "http://localhost:8080" }
-  # api = { service = "http://localhost:3000" }
-  # ssh = { service = "ssh://localhost:22" }
+  "www.warnet-tunnel" = { service = "https://localhost:443" }
+  # api = { service = "http://localhost:3000" }   # -> api.warnet-tunnel.warnetwork.cloud (add as new key)
 }
 
 access_allowed_emails = [
-  "you@example.com",
+  "dev.warnetech@gmail.com",
 ]
 
 # access_allowed_email_domains = ["example.com"]
