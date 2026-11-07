@@ -34,3 +34,14 @@ Import syntax for each resource is in the provider docs; check the exact ID
 format with `terraform import -help` if a command is rejected.
 
 Keep the tunnel token out of the repo and out of chat. Rotate any token that has been pasted.
+
+## Networks
+
+| Name | ID | Role | Status |
+| --- | --- | --- | --- |
+| warnetech-tunnel | `86f654bb-aa29-4387-9815-7cb8d258b471` | Public ingress: `www.warnet-tunnel.warnetwork.cloud` -> `localhost:443` | Connected (per logs) |
+| warnetech-webserver | `a0c57798-0737-4085-9945-516d3daee4a4` | Tunnel for the web server (cloudflared service) | Not checked |
+| warnetech-server | not recorded | Tunnel reaching the private server, host `vpc.warnetwork.cloud` | **Inactive** |
+| warnetech-server-vpc | service `019fc1ec-f970-7b93-8cbb-911fa1b4a35f` | Private TCP service, `vpc.warnetwork.cloud`, port 5190 (MySQL) | Blocked until warnetech-server is active |
+
+The VPC service is deliberately not bound to the MCP Worker. A bound database on a public endpoint is exposed to every caller of MCP.
