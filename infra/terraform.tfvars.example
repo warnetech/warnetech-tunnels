@@ -1,0 +1,21 @@
+# Copy to terraform.tfvars and fill in your values
+# DO NOT commit terraform.tfvars — it contains secrets
+
+cloudflare_api_token  = ""          # Scoped API token
+cloudflare_account_id = ""          # Dashboard > any zone > Overview > Account ID
+cloudflare_zone_id    = ""          # Dashboard > zone > Overview > Zone ID
+cloudflare_zone       = "warnetwork.cloud"
+
+tunnel_name = "warnetech-tunnel"
+
+tunnel_services = {
+  "www.warnet-tunnel" = { service = "https://localhost:443" }
+  # api = { service = "http://localhost:3000" }   # -> api.warnet-tunnel.warnetwork.cloud (add as new key)
+}
+
+access_allowed_emails = [
+  "dev.warnetech@gmail.com",
+]
+
+# access_allowed_email_domains = ["example.com"]
+# access_session_duration      = "24h"

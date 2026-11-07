@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "warnetech-mcp",
+  "main": "dist/index.js",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "kv_namespaces": [
+    { "binding": "WARNETECH_KV", "id": "00f2977d3fbc41358a132c3619d9f607" }
+  ],
+  "vars": {
+    "MCP_HOSTNAME": "mcp.example.com"
+  }
+}
